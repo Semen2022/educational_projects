@@ -1,5 +1,6 @@
 /* Start Common style for HTML, body*/
-html, p, h1{
+/* Reset style CSS in another file "resetcssmeyer.css"
+  html, p, h1{
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -7,7 +8,7 @@ html, p, h1{
 *, *::after, *::before{
 	box-sizing: inherit;
 } 
-
+*/
 body{
 	font-family: 'Titillium Web', sans-serif;; /*семейство подгружаемых шрифтов для сайта*/
   font-style: normal; /* стиль шрифта для тела страницы*/
@@ -82,30 +83,30 @@ body{
 	max-width: 1140px;
 	padding-left: 20px;
 	padding-right: 20px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 }
 
 header {
 background: #87509c;
-height: 596px;
 }
 
 .logo {
-  padding: 57px 0 0 42px;
+ padding-left: 61px;
 }
 
 #startpage{
+  padding-top: 75px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.menu_link{
-  padding-top: 57px;
+.menu_header{
+  width: 40%;
+  padding-right: 25px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	flex-wrap: wrap;
 }
 
@@ -118,11 +119,8 @@ height: 596px;
 	font-weight: 400;
 	font-size: 16px;
   text-transform: uppercase;
-	/*line-height: 30px;*/
-	margin-left: 5px ;
-	padding: 9px 17px;
+	padding: 7px 15px 5px 17px; 
   border-radius: 3px;
-  /*background-color: aqua;*/
 }
 
 .menu_item:hover {
@@ -136,31 +134,36 @@ height: 596px;
 	font-weight: bold;
 	font-size: 42px;
   color: #FFF;
-  margin-top: 142px;
+
+  margin-top: 129px;
   text-align: center;
 }
 
 .bigButton { 
-  display: flex;
-  justify-content: center;
-}
+  text-align: center; 
+  padding-top: 55px;
+  padding-bottom: 145px;
+  }
   
  .button {
-  /* display: block; работает и без этого кнопка по центру и  ширина и высота блока остается заявленной*/ 
   text-align: center;
   font-family: 'Titillium web';
 	font-style: normal;
-	font-weight: bold;
-	font-size: 26px;
+	font-weight: semibold;
+	font-size: 18px;
   color: #FFF;
-  margin-top: 60px;
+  height: 70px;
   width: 293px;
-  height: 66px;
   background: #eb7d4b;
+  border:0;
   border-radius: 3px;
-  /* border-bottom: 1px solid #c86a40; */
-  /*box-shadow: 0 1px 0 rgb(200, 106, 64); /* Параметры тени c86a40 */
+  border-bottom: 4px solid #c86a40;
+  cursor: pointer;
 }
 
+.button:hover {
+  border-top: 4px solid #c86a40;
+  border-bottom: 0px;
+}
 
 /* Header style END*/
