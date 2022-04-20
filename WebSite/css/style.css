@@ -15,7 +15,7 @@ body{
   font-size: 16px; /* размер шрифта для страницы по-умолчанию 16 пикселей (обычный стандарт)*/
   line-height: 1.2; /* задается высота строк*/
   font-weight: normal; /* вес (жирность шрифта - устанавливаем обычную 300)*/
-  color: #0004ff;
+  color: #fff;
 	background-color: #56d1b2;
 }
 /* END Common style for HTML, body*/
@@ -153,7 +153,7 @@ background: #87509c;
 
 .bigButton { 
   text-align: center; 
-  padding-top: 55px;
+  padding-top: 54px;
   padding-bottom: 145px;
   }
   
@@ -186,7 +186,7 @@ background: #87509c;
   background-color: #17c2a4 ;
 }
 
-.service__title{
+.block__title{
   text-align: center;
   font-family: 'Titillium web';
 	font-style: normal;
@@ -195,45 +195,48 @@ background: #87509c;
   color: #FFF;
   text-transform: uppercase;
   letter-spacing: 4px;
-  padding-top: 109px;
+  padding-top: 110px;
 }
 
-.service__title:after{
+.block__title:after{
   display: block;
   content: "";
-  background-color: #14a58c;
   width: 87px;
   height: 4px;
   margin: 12px auto 0px;
 }
 
-.servise_text{
+.block__service .block__title:after{
+  background-color: #14a58c;
+}
+
+.block_text{
   font-size: 18px;
   color: #fff;
   line-height: 1.4;
   word-spacing: 2.5px;
   text-align: center;
-  width: 605px;
-  margin: 20px auto 0px;
+  width: 652px;
+  margin: 16px auto 0px;
 }
 
-.servise__items{
-  margin-top: 81px;
-  padding-bottom: 124px;
+.block__items{
+  margin-top: 82px;
+  padding-bottom: 125px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.servise__item{  
+.block__item{  
   flex-basis: 22%;
-  text-align: center; 
+  text-align: center;
 }
-.servise__item img{
+.img_service{
   height: 135px;
 }
 
-.servise__item h3{
+.block__item h3{
   font-size: 24px;
   color: #fff ;
   font-weight: 600;
@@ -245,7 +248,153 @@ background: #87509c;
   margin: 17px auto 0px;
   width: 80%;
   line-height: 1.5;
-  
 }
 
 /* Main Services END */
+
+/* Main Team START */
+
+.block_team{
+  background-color: #e7f1f8;
+}
+.block_team .block__title, .block_text{
+  color: #3c4761;
+}
+
+.block_team .block__title:after{
+  background-color: #c8d9e5;
+ }
+ .img_team{
+  width: 80%;
+  }
+  
+  .block_team h3{
+    margin-top: 30px;
+    color: #27283d;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .block_team h4{
+    color: #30bae7;
+    padding-top: 6px;
+    
+
+  }
+  .block_team .description{
+  font-weight: 300;
+	color: #3c4761;
+  }
+
+  .contacts_item{
+    margin: 2em auto 0;
+    width: 11em;
+    display:flex;
+    justify-content: center;
+  }
+      /*1.  ниже идет 4 почти идентичных блока.
+      вопрос - можно ли как-то сделать один блок c CSS кодом - общий для всех свойств?
+      а по, допустим - классу, добавлять в него различия, которые
+      не повторяются в других блоках этого контента?
+      Например:
+      .contacts_item{
+        display: block;
+        text-decoration: none;
+        background-repeat: no-repeat;
+        width: 2em;
+        height: 2em;
+        padding: 0 .4em;
+        
+      }  
+      
+      .fb{
+        background-image: url('../img/Facebook-Icon.png');
+      }
+      .tw{
+        background-image: url('../img/Twitter.png');
+      }
+      .ln{
+        background-image: url('../img/LinkedIn-icon.png');
+      }
+      .mail{
+         background-image: url('../img/Mail.png');
+     }
+
+     и как-то по другому (через "-") именутся классы в html, 
+     никак не могу поймать и понять этот момент.
+     
+     2. В таких случаях как принято (что считается более правильным?)
+     задать картинку img в HTML или через background-image в CSS?)
+     - если задавать в IMG - то смогу обойтись одним блоком кода в CSS;
+     - если задавать в background-image - то, пока, 4 блока кода в CSS,
+     кажется неверным...
+
+     */
+    .contact_item_fb{
+    display: block;
+    text-decoration: none;
+    background-image: url('../img/Facebook-Icon.png');
+    background-repeat: no-repeat;
+    width: 2em;
+    height: 2em;
+    padding: 0 .4em;
+  }
+  
+  .contact_item_tw{
+    display: block;
+    text-decoration: none;
+    background-image: url('../img/Twitter.png');
+    background-repeat: no-repeat;
+    width: 2em;
+    height: 2em;
+    padding: 0 .4em;
+  }
+
+  .contact_item_ln{
+    display: block;
+    text-decoration: none;
+    background-image: url('../img/LinkedIn-icon.png');
+    background-repeat: no-repeat;
+    width: 2em;
+    height: 2em;
+    padding: 0 .4em;
+  }
+
+  .contact_item_mail{
+    display: block;
+    text-decoration: none;
+    background-image: url('../img/Mail.png');
+    background-repeat: no-repeat;
+    width: 2em;
+    height: 2em;
+    padding: 0 .4em;
+  }
+
+/* Main Team END */
+
+/*Main Skills START*/
+.block__skills{
+  background-color: #fff;
+}
+
+.block__skills h2, h6 {
+  color: #3c4761;
+} 
+ 
+.block__skills .block_text{
+  width: 600px;
+}
+
+.block__skills .block__title:after{
+  background-color: #dfe8ed;
+}
+
+.block__skills h3{
+  margin-top: 30px;
+  color: #3c4761;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/*Main Skills END*/
+
