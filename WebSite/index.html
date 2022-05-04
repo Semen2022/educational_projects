@@ -285,11 +285,20 @@
                 </h6>
             </div>
             <form class="form_contact" action="#" method="post" enctype="multipart/form-data">
-                <div class="name_email">
-                    <input class="form_name" type="text" tabindex="1" placeholder="Your Name*" required name="user_name">
-                    <input class="form_email" type="email" tabindex="2" placeholder="Your Email*" name="user_Email">
+                <div class="fields_form">
+                    <label class="field_user_name">
+                        <input required class="form_name" type="text" tabindex="1" name="user_name">
+                        <span class="ph_user_name" placeholder="Your Name"></span>
+                    </label>
+                    <label class="field_form_email">
+                        <input required class="form_email" type="text" tabindex="2" name="user_email">
+                        <span class="ph_email" placeholder="Your Email"></span>                    
+                    </label>
+                    <label class="field_form_message">
+                        <textarea required class="form_message" name="text_message" tabindex="3"></textarea>
+                        <span class="ph_message" placeholder="Your Message"></span>                
+                    </label>
                 </div>
-                <textarea class="form_message" name="text_message" tabindex="3" placeholder="Your Message*"></textarea>                
                 <div class="bigButton">
                     <button class="button" type="submit" tabindex="4" > 
                         SEND MESSAGE

@@ -520,43 +520,99 @@ background: #87509c;
   .get_in_touch .block__title:after{
     background-color: #273a71;
   }
-.form_contact{
-  max-width: 860px;
-  margin: 75px auto 0px;
-}
+  .form_contact{
+    max-width: 1000px;
+    margin: 75px auto 0px;
+    padding: 0px 20px;
+  }
 
-.name_email{  
-  max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  column-gap: 20px;
-}
+  .fields_form{  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
 
-.form_name,
-.form_email{
-flex-basis: 48%;
-padding: 20px 10px 16px 25px;
-}
+  .field_user_name,
+  .field_form_email{
+    position: relative;
+    flex-basis: 48%;
+    margin-bottom: 26px;
+  }
 
-.form_message{
-  margin-top: 26px;
-  width: 100%;
-  padding:  20px 10px 138px 25px;
-}
+  .field_form_message{
+    position: relative;
+    flex-basis: 100%;
+    min-height: 200px;
+  }
 
-.form_name,
-.form_email,
-.form_message{
-  display: block;
-  background-color: #273a71;
+  .form_name,
+  .form_email,
+  .form_message{
+    display: block;
+    background-color: #273a71;
+    font-family: 'Titillium web';
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    border-radius: 4px;
+    outline: none;
+    cursor: text;
+    width: 100%;
+    height: 100%;
+    padding: 15px 24px ;
+  }
+
+  .form_message{
+    resize: vertical;
+  }
+
+/*Red Star START*/
+ 
+  span.ph_user_name,
+  span.ph_email,
+  span.ph_message{
+  position: absolute;
+  top: 18px;
+  left: 24px;
+}
+  /* такая связка (селектор:invalid + селектор:before - 
+    позволяет убирать значение "плэйсхолдера" при 
+    начале заполнения поля пользователем)
+   */ 
+   
+   input.form_name:invalid + span.ph_user_name:before,
+   input.form_email:invalid + span.ph_email:before, 
+   textarea.form_message:invalid + span.ph_message:before{
+  /* position: relative;  его "комментирование" не влияет на верстку, планирую не использовать*/
+  content: attr(placeholder);
+  cursor: text;
+  font-family: 'Titillium Web', sans-serif;;
   color: #fff;
+  font-style: normal;
   font-size: 18px;
-  border: 0;
-  border-radius: 4px;
+  font-weight: 400;
 }
 
 
+/*некорректно работает для input type="email" */ 
+/*.form_email:invalid + .ph_email:before{
+  background-color: #393939;
+  cursor: wait;
+  content: attr(placeholder);
+}
+*/
+
+input:invalid + span:after,
+.form_message:invalid + .ph_message:after {
+  content: ' *';
+  position: relative;
+  color: red;
+}
+
+/*Red Star END*/
+
+        /* ПОДСКАЗКА СЕБЕ */
 /* убираем рамку вокруг полей при активации поля*/
 /*.form_name:focus,
 .form_email:focus,
@@ -564,21 +620,12 @@ padding: 20px 10px 16px 25px;
   outline: none;
 }*/
 
-/* убираем рамку вокруг полей*/
+/* убираем рамку вокруг полей 
 form *{
   outline: none;
 }
+*/
 
-.form_name::placeholder,
-.form_email::placeholder,
-.form_message::placeholder{
-  font-family: 'Titillium Web', sans-serif;;
-  color: #fff;
-  font-style: normal;
-  font-size: 18px;
-  font-weight: 400;
-}
- 
 .form_contact .bigButton{
   margin: 6px auto -30px;
 }
@@ -592,7 +639,6 @@ form *{
 .form_contact .button:hover {
   border-top: 4px solid #299ec5;
   border-bottom: 0;
-  color: #234cc9;  
 }
 
 .form_contact .button:active {
@@ -600,15 +646,16 @@ form *{
   border: 6px solid #3e90ac;
   color: #93d1e4;  
 }
+
+
   /*Main get in touch END*/
 
   /*Footer START*/
 
 footer{
   background-color: #344b8e;
-  max-height: 113px;
-  border-top: #7594f1;
-}
+ }
+
 footer hr{
   margin: 0px;
   border: 0px;
