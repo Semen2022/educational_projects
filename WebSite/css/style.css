@@ -223,7 +223,7 @@ background: #87509c;
 }
 
 .block__items{
-  margin-top: 82px;
+  margin-top: 80px;
   padding-bottom: 12px;
   display: flex;
   flex-wrap: wrap;
@@ -316,20 +316,35 @@ background: #87509c;
 .block__skills h2, .block__skills h6 {
   color: #3c4761;
 } 
- 
-.block__skills .block_text{
-  max-width: 600px;
+
+.block__skills .block__title{
+    margin-top: -4px;   
+    padding-bottom: 2px;
 }
 
 .block__skills .block__title:after{
   background-color: #dfe8ed;
+} 
+
+.block__skills .block_text{
+  max-width: 600px;
 }
 
 .block__skills h3{
-  margin: 20px auto 105px; 
+  margin: 0px auto 118px; 
   color: #3c4761;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.block__skills .block__items {
+  margin-top: 64px;
+  padding-bottom: 1px
+}
+
+.block__skills svg text.percentage_p{
+  font-size: 16px;
+  font-weight: 300;
 }
 
 /*Main Skills END*/
@@ -372,12 +387,17 @@ background: #87509c;
   margin: 18px auto 0px;
 }
 
+.portfolio_header{
+  margin: 41px auto 0px;
+  max-width: 378px;
+}
+
 .portfolio_header_menu{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 35%;
-  margin: 41px auto 0px;
+  /*width: 100%;
+  margin: 41px auto 0px;*/
 }
 .pf_header_menu_item{
   color: #393939;

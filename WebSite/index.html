@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/resetcssmeyer.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/progressBar.css">
     <title>Cuda_ProjectOne</title>
 </head>
 <body>
@@ -167,21 +168,42 @@
                     tempor incididunt ut labore et dolore 
                     magna aliqua.
                 </h6>
+                <!-- вставка НОВЫХ круговых диаграмм с использованием jQuery-->
                 <div class="block__items">
-                    <div class="block__item">
-                        <img class="img_skills" src="../WebSite/img/Progress90.png" alt="picture90%">
+                    <div class="block__item webdesign">
+                        <svg class="radial-progress" data-percentage="90" viewBox="0 0 80 80">
+                            <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                            <text class="percentage" x="49%" y="60%" transform="matrix(0, 1, -1, 0, 80, 0)">90</text>
+                            <text class="percentage_p" x="71%" y="60%" transform="matrix(0, 1, -1, 0, 80, 0)">%</text>
+                        </svg>
                         <h3>Web Design</h3>                    
                     </div>
-                    <div class="block__item">
-                        <img class="img_skills" src="../WebSite/img/Progress75.png" alt="picture75%">
+                    <div class="block__item htmlcss">
+                        <svg class="radial-progress" data-percentage="75" viewBox="0 0 80 80">
+                            <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                            <text class="percentage" x="48%" y="60%" transform="matrix(0, 1, -1, 0, 80, 0)">75</text>
+                            <text class="percentage_p" x="71%" y="60%" transform="matrix(0, 1, -1, 0, 80, 0)">%</text>
+                        </svg>
                         <h3>HTML / CSS</h3>
                     </div>
-                    <div class="block__item">
-                        <img class="img_skills" src="../WebSite/img/Progress70.png" alt="picture70%">
+                    <div class="block__item graphic">
+                        <svg class="radial-progress " data-percentage="70" viewBox="0 0 80 80">
+                            <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                            <text class="percentage" x="46%" y="60%" transform="matrix(0, 1, -1, 0, 80, 0)">70</text>
+                            <text class="percentage_p" x="68%" y="60%" transform="matrix(0, 1, -1, 0, 80, 0)">%</text>
+                        </svg>
                         <h3>GRAPHIC DESIGN</h3>
                     </div>
-                    <div class="block__item">
-                        <img class="img_skills" src="../WebSite/img/Progress85.png" alt="picture85%">
+                    <div class="block__item uiux">
+                        <svg class="radial-progress" data-percentage="85" viewBox="0 0 80 80">
+                            <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                            <text class="percentage" x="45%" y="60%" transform="matrix(0, 1, -1, 0, 80, 0)">85</text>
+                            <text class="percentage_p" x="68%" y="60%" transform="matrix(0, 1, -1, 0, 80, 0)">%</text>
+                        </svg>
                         <h3>UI / UX</h3>
                     </div>
                 </div>
@@ -197,12 +219,15 @@
                     ipsum quia dolor sit amet consectetur, 
                     adipisci velit, sed quia non numquam
                 </h6>
-                <div class="portfolio_header_menu">
+                <div class="portfolio_header">
+                    <div class="portfolio_header_menu">
                     <a href="#" class="pf_header_menu_item">ALL</a>
                     <a href="#" class="pf_header_menu_item">WEB</a>
                     <a href="#" class="pf_header_menu_item">APPS</a>
                     <a href="#" class="pf_header_menu_item">ICONS</a>
                 </div>
+                </div>
+                
                 <div class="pf_block__items">
                     <div class="pf_block__item">
                         <img class="portfolio_img" src="../WebSite/img/1.png" alt="foto works 1">
@@ -318,6 +343,16 @@
             <a href="https://www.dribbble.com/">Dribbble</a>
             <a href="https://github.com/">GitHub</a>
         </div>
-    </footer>    
+    </footer>
+    <script src="./libs/jQuery/jquery-3.6.0.min.js"></script>
+    <!-- Или подключать через Интернет , сразу с сайта jQuery.com
+        <script src="https://code.jquery.com/jquery-3.6.0.js" 
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+            crossorigin="anonymous">
+        </script>
+    -->
+        
+    <script src="./js/circleProgressBar.js"></script>
+
 </body>
 </html>
