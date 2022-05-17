@@ -5,6 +5,7 @@ html, body{
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+  min-width: 320px;
 }
 
 *, *::after, *::before{
@@ -118,7 +119,6 @@ background: #87509c;
 }
 
 .menu_header{
-  width: 42.3%;
   padding-right: 4px;
 	display: flex;
 	justify-content: space-around;
@@ -160,6 +160,10 @@ background: #87509c;
   }
   
  .button {
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  padding-top: 22px;
   text-align: center;
   font-family: 'Titillium web';
 	font-style: normal;
@@ -173,12 +177,21 @@ background: #87509c;
   border-radius: 3px;
   border-bottom: 4px solid #c86a40;
   cursor: pointer;
+  transition: all .15s cubic-bezier(0.29, 0.43, 0.24, 0.78);
 }
 
 .button:hover {
   border-top: 4px solid #c86a40;
   border-bottom: 0px;
 }
+
+.button:active {
+  opacity: .7;
+  border: 6px solid #c86a40;
+  color: #fdd9ca;  
+}
+
+
 
 /* Header style END*/
 
@@ -389,27 +402,25 @@ background: #87509c;
 
 .portfolio_header{
   margin: 41px auto 0px;
-  max-width: 378px;
+  max-width: 45%;
 }
 
 .portfolio_header_menu{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /*width: 100%;
+ /* width: 100%;
   margin: 41px auto 0px;*/
 }
 .pf_header_menu_item{
   color: #393939;
   font-size: 18px;
   text-decoration: none;
-  padding: 8px 26px;
-  margin-right: 1.1%;
+  text-align: center;
   background-color: #ebc985;
   cursor: pointer;
-}
-.pf_header_menu_item:last-child{
-  margin-right: 0;
+  padding: 8px 0px;
+  width: 23%;
 }
 
 .pf_header_menu_item:hover{
@@ -424,7 +435,25 @@ background: #87509c;
 
 .pf_block__item{
   padding-top: 64px;
-  flex-basis:  537px;
+  flex-basis:  48%;
+}
+
+.pf_block__item a{
+  text-decoration: none;
+  color: #393939;
+
+}
+
+.pf_block__item a:visited{
+  color: #393939;
+}
+
+.pf_block__item a:active{
+  color: #7e7d7d;
+}
+
+.portfolio_img{
+  width: 100%;
 }
 
 .pf_block__item h3{
@@ -448,6 +477,12 @@ background: #87509c;
 .block__portfolio .button:hover {
   border-top: 4px solid #14a58c;
   border-bottom: 0px;
+}
+
+.block__portfolio .button:active {
+  opacity: .7;
+  border: 6px solid #14a58c;
+  color: #a6c7c1;  
 }
 
 .pf_big_button{
@@ -480,7 +515,7 @@ background: #87509c;
 }
 
 .aboutUs_block__item{
-  max-width: 510px;
+  width: 45%;
   margin: 60px 0 80px;
   display: flex;
   flex-wrap: nowrap;
@@ -587,7 +622,7 @@ background: #87509c;
     resize: vertical;
   }
 
-/*Red Star START*/
+    /*Red Star START*/
  
   span.ph_user_name,
   span.ph_email,
@@ -601,9 +636,9 @@ background: #87509c;
     начале заполнения поля пользователем)
    */ 
    
-   input.form_name:invalid + span.ph_user_name:before,
-   input.form_email:invalid + span.ph_email:before, 
-   textarea.form_message:invalid + span.ph_message:before{
+   input.form_name:not(:focus):invalid + span.ph_user_name:before,
+   input.form_email:not(:focus):invalid + span.ph_email:before, 
+   textarea.form_message:not(:focus):invalid + span.ph_message:before{
   /* position: relative;  его "комментирование" не влияет на верстку, планирую не использовать*/
   content: attr(placeholder);
   cursor: text;
@@ -623,14 +658,14 @@ background: #87509c;
 }
 */
 
-input:invalid + span:after,
-.form_message:invalid + .ph_message:after {
+input:not(:focus):invalid + span:after,
+.form_message:not(:focus):invalid + .ph_message:after {
   content: ' *';
   position: relative;
   color: red;
 }
 
-/*Red Star END*/
+    /*Red Star END*/
 
         /* ПОДСКАЗКА СЕБЕ */
 /* убираем рамку вокруг полей при активации поля*/
@@ -654,6 +689,7 @@ form *{
   background-color: #30bae7;
   border-bottom: 4px solid #299ec5;
   transition: all .15s cubic-bezier(0.29, 0.43, 0.24, 0.78);
+  padding-bottom: 22px;
 }
 
 .form_contact .button:hover {
@@ -686,7 +722,7 @@ footer hr{
 .social_media{
   max-width: 945px;
   text-align: center;
-  padding: 41px 0;
+  padding: 41px 20px;
   margin: 0 auto;
 }
 
@@ -711,3 +747,47 @@ footer hr{
 }
 
   /*Footer END*/
+
+/*Adaptiv START*/
+@media screen and (max-width: 576px) {
+  
+  .block__title{
+    padding-top: 40px;
+  }
+
+  .get_in_touch .block_text {
+    font-size: 16px;
+  }
+
+  .form_contact{
+    margin-top: 25px;
+  }
+  .field_user_name, .field_form_email {
+    flex-basis: 100%;
+  } 
+  
+  .bigButton{
+    padding: 20px 0px ;
+  }
+
+  .form_contact .bigButton {
+    margin: 0px auto;
+  }
+
+  .social_media {
+    padding: 10px 0px;
+  }
+
+  .social_media a{
+    margin-right: 30px;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 577px)
+ and (max-width: 768px) {
+     
+}
+
+
+/*Adaptiv END*/

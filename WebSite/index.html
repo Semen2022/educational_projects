@@ -17,10 +17,11 @@
                      <img src="./img/logo.png" alt="Logo">
                  </div>
                  <nav class="menu_header">
-                          <a class="menu_item" href="#">Home</a>
                           <a class="menu_item" href="#About">About</a>
-                          <a class="menu_item" href="#Work">Work</a>
-                          <a class="menu_item" href="#Blog">Blog</a>
+                          <a class="menu_item" href="#Team">Team</a>
+                          <a class="menu_item" href="#Skills">Skills</a>
+                          <a class="menu_item" href="#Portfolio">Work</a>
+                          <a class="menu_item" href="#AboutUs">Blog</a>
                           <a class="menu_item" href="#Contact">Contact</a>
                  </nav>      
              </div>
@@ -29,12 +30,12 @@
                   <p> and we build awesome websites and mobile apps. </p>
                 </div>
             <div class="bigButton">
-                <button class="button">WORK WITH US!</button>
+                <a class="button" href="#Contact">WORK WITH US!</a>
             </div>    
         </div>
     </header>
     <main>
-        <section class="block__service">
+        <section class="block__service" id="About" >
             <div class="wrapper">
                 <h2 class="block__title">SERVICES WE PROVIDE</h2>
                 <h6 class="block_text">
@@ -84,7 +85,7 @@
 
         </section>
 
-        <section  class="block_team">
+        <section  class="block_team" id="Team">
             <div class="wrapper">
                 <h2 class="block__title">MEET OUR BEAUTIFUL TEAM</h2>
                 <h6 class="block_text">
@@ -159,7 +160,7 @@
             </div>
         </section>
 
-        <section class="block__skills">
+        <section class="block__skills" id="Skills">
             <div class="wrapper">
                 <h2 class="block__title">WE GOT SKILLS!</h2>
                 <h6 class="block_text">
@@ -211,7 +212,7 @@
 
         </section>
 
-        <section class="block__portfolio">
+        <section class="block__portfolio" id="Portfolio">
             <div class="wrapper">
                 <h2 class="portfolio__title">OUR PORTFOLIO</h2>
                 <h6 class="portfolio_text">
@@ -221,42 +222,40 @@
                 </h6>
                 <div class="portfolio_header">
                     <div class="portfolio_header_menu">
-                    <a href="#" class="pf_header_menu_item">ALL</a>
-                    <a href="#" class="pf_header_menu_item">WEB</a>
-                    <a href="#" class="pf_header_menu_item">APPS</a>
-                    <a href="#" class="pf_header_menu_item">ICONS</a>
+                    <a href="./pages/all.html" class="pf_header_menu_item">ALL</a>
+                    <a href="./pages/web.html" class="pf_header_menu_item">WEB</a>
+                    <a href="./pages/apps.html" class="pf_header_menu_item">APPS</a>
+                    <a href="./pages/icons.html" class="pf_header_menu_item">ICONS</a>
                 </div>
                 </div>
                 
                 <div class="pf_block__items">
                     <div class="pf_block__item">
-                        <img class="portfolio_img" src="../WebSite/img/1.png" alt="foto works 1">
-                        <h3>Isometric Perspective Mock-Up</h3>                    
+                        <a href="./pages/all.html"><img class="portfolio_img" src="../WebSite/img/1.png" alt="foto works 1"></a>
+                        <h3><a href="./pages/all.html">Isometric Perspective Mock-Up</a></h3>                    
                     </div>
                     <div class="pf_block__item">
-                        <img class="portfolio_img" src="../WebSite/img/2.png" alt="foto works 2">
-                        <h3>Time Zone App UI</h3>
+                        <a href="./pages/web.html"><img class="portfolio_img" src="../WebSite/img/2.png" alt="foto works 2"></a>
+                        <h3><a href="./pages/web.html">Time Zone App UI</a></h3>
                     </div>
                     <div class="pf_block__item">
-                        <img class="portfolio_img" src="../WebSite/img/3.png" alt="foto works 3">
-                        <h3>Viro Media Players UI</h3>
+                        <a href="./pages/apps.html"><img class="portfolio_img" src="../WebSite/img/3.png" alt="foto works 3"></a>
+                        <h3><a href="./pages/apps.html">Viro Media Players UI</a></h3>
                     </div>
                     <div class="pf_block__item">
-                        <img class="portfolio_img" src="../WebSite/img/4.png" alt="foto works 4">
-                        <h3>Blog / Magazine Flat UI Kit</h3>
+                        <a href="./pages/icons.html"><img class="portfolio_img" src="../WebSite/img/4.png" alt="foto works 4"></a>
+                        <h3><a href="./pages/icons.html">Blog / Magazine Flat UI Kit</a></h3>
                     </div>
                 </div>
                 <div class="bigButton">
-                    <button class="button"> 
-                        <a class="pf_big_button" href="#">LOAD MORE PROJECTS</a>
-                    </button>
+                    <a class="button pf_big_button" href="./pages/all.html">LOAD MORE PROJECTS</a>
                 </div> 
             </div>
         </section>
 
-        <section class="block__aboutUs">
+        <section class="block__aboutUs" id="AboutUs">
             <div class="wrapper">
-                <h2 class="portfolio__title">WHAT POEPLE SAY ABOUT US</h2>
+                <h2 class="portfolio__title">WHAT PEOPLE SAY ABOUT US</h2>
                 <h6 class="portfolio_text">
                     Our clients love us!
                 </h6>
@@ -301,7 +300,7 @@
                 </div>
             </div>
         </section>
-        <section class="get_in_touch">
+        <section class="get_in_touch" id="Contact">
             <div class="wrapper">
                 <h2 class="block__title">GET IN TOUCH</h2>
                 <h6 class="block_text">
@@ -309,14 +308,18 @@
                     DC 20500, United States of America. Tel: (202) 456-1111
                 </h6>
             </div>
-            <form class="form_contact" action="#" method="post" enctype="multipart/form-data">
+            <form class="form_contact" 
+                    action="#" 
+                    method="post" 
+                    enctype="multipart/form-data"
+                    autocomplete="off">
                 <div class="fields_form">
                     <label class="field_user_name">
                         <input required class="form_name" type="text" tabindex="1" name="user_name">
                         <span class="ph_user_name" placeholder="Your Name"></span>
                     </label>
                     <label class="field_form_email">
-                        <input required class="form_email" type="text" tabindex="2" name="user_email">
+                        <input required class="form_email" type="email" tabindex="2" name="user_email">
                         <span class="ph_email" placeholder="Your Email"></span>                    
                     </label>
                     <label class="field_form_message">
@@ -345,6 +348,7 @@
         </div>
     </footer>
     <script src="./libs/jQuery/jquery-3.6.0.min.js"></script>
+    
     <!-- Или подключать через Интернет , сразу с сайта jQuery.com
         <script src="https://code.jquery.com/jquery-3.6.0.js" 
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
