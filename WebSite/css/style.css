@@ -241,6 +241,7 @@ background: #87509c;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  column-gap: 15px;
 }
 
 .block__item{  
@@ -282,7 +283,7 @@ background: #87509c;
   background-color: #c8d9e5;
  }
  .img_team{
-  width: 80%;
+  width: 200px;
   }
   
   .block_team h3{
@@ -515,7 +516,7 @@ background: #87509c;
 }
 
 .aboutUs_block__item{
-  width: 45%;
+  flex-basis: 45%;
   margin: 60px 0 80px;
   display: flex;
   flex-wrap: nowrap;
@@ -703,7 +704,6 @@ form *{
   color: #93d1e4;  
 }
 
-
   /*Main get in touch END*/
 
   /*Footer START*/
@@ -749,8 +749,92 @@ footer hr{
   /*Footer END*/
 
 /*Adaptiv START*/
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+     
+
+
+
+  /*Main About us START adaptiv*/
+
+.aboutUs_block__item{
+  flex-basis: 100%;
+  margin: 10px 0px 20px;
+}
+
+.noute{
+  margin: 0 auto;
+}
+
+  /*Main About us END adaptiv*/
+
+/*Main get in touch START adaptiv*/
+
+.block__title{
+  padding-top: 75px;
+}
+
+/*Main get in touch END adaptiv*/
+
+}
+
+
+
 @media screen and (max-width: 576px) {
-  
+
+  /*Main Skills START adaptiv*/
+
+  .block__skills .block__items {
+    margin-top: 0px;
+  }
+
+  .block__skills h3 {
+    margin: -10px auto 40px;
+  }
+
+
+  /*Main Skills START adaptiv*/
+
+
+  /*Main Portfolio START adaptiv*/
+
+  .pf_block__item{
+    padding-top: 40px;
+  }
+
+  .block__portfolio .bigButton {
+    margin-top: 0px;
+    padding: 20px 0px;
+}
+
+  /*Main Portfolio END adaptiv*/
+
+  /*Main About us START adaptiv*/
+
+.portfolio__title{
+  padding: 40px 0px 0px 10px;
+}
+
+.block__aboutUs .pf_block__items {
+  padding: 20px 0px 26px 0px;
+}
+
+.aboutUs_block__item{
+  flex-basis: 100%;
+  margin: 10px 0px 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feedback{
+  padding: 3px 0px 5px 0px;
+}
+
+/*Main About us END adaptiv*/
+
+
+/*Main get in touch START adaptiv*/
+
   .block__title{
     padding-top: 40px;
   }
@@ -762,6 +846,7 @@ footer hr{
   .form_contact{
     margin-top: 25px;
   }
+
   .field_user_name, .field_form_email {
     flex-basis: 100%;
   } 
@@ -774,6 +859,10 @@ footer hr{
     margin: 0px auto;
   }
 
+  /*Main get in touch END adaptiv*/
+
+  /*Footer START adaptiv*/
+
   .social_media {
     padding: 10px 0px;
   }
@@ -782,12 +871,9 @@ footer hr{
     margin-right: 30px;
     line-height: 35px;
   }
-}
 
-@media screen and (min-width: 577px)
- and (max-width: 768px) {
-     
-}
+/*Footer END adaptiv*/
 
+}
 
 /*Adaptiv END*/
